@@ -1,5 +1,6 @@
 # microfinanzas-smarthphone
-Microfinanzas
+(Microfinanzas en dispositivos móviles)
+
 
 CARACTERÍSTICAS
 (APLICACIÓN CANAL MÓVIL)
