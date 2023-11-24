@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifx>
+     <CustInfo>
+         <SessKey>ABCDEFGHIJKLMNOPQRSTUVWXYZYXWVUTSRQPONML</SessKey>
+         <CustLangPref>ESP</CustLangPref>
+         <Name>Inclusion Financiera</Name>
+         <Version>1.0</Version>
+         <RqUID>7796AAAA-685E-47b0-9C2F-27FB475B05FA</RqUID>
+         <OrgIdMatrix>Paradigma</OrgIdMatrix>
+         <OrgIdClient>Agrobanco</OrgIdClient>
+         <ShiftDate>15/03/2015</ShiftDate>
+         <ServInfo>1</ServInfo>
+         <AsesorId >jcallund</AsesorId>
+         <CustId>12234567-8</CustId>
+         <CustAppType>1</CustAppType>
+         <CustVisitDate>16/03/2015</CustVisitDate>
+         <CustBussFeasPlan>Descripción de Viabilidad Proyecto</CustBussFeasPlan>
+         <CustAdministra>Descripción Administración Proyecto</CustAdministra>
+         <CustBussBackgr>Descripción Antecedentes del Negocio</CustBussBackgr>
+         <CustConclus>Descripción Conclusión</CustConclus>
+         <CustRisks>Descripción Riesgos</CustRisks>
+         <CustNumbEmpl>13</CustNumbEmpl>
+         <CustNumbEmplSS>10</CustNumbEmplSS>
+         <CustCredJust>on</CustCredJust>
+         <CustLocLength>41º 24' 12.1674"</CustLocLength>
+         <CustLocLatitu>2º 10' 26.508"</CustLocLatitu>
+         <CustAuditDate>23/10/2013</CustAuditDate>
+         <CustAuditTime>15:50:46</CustAuditTime>
+         <CustSituation>3</CustSituation>
+      </CustInfo>
+      <CustInfo>
+         <SessKey>ABCDEFGHIJKLMNOPQRSTUVWXYZYXWVUTSRQPONML</SessKey>
+         <CustLangPref>ESP</CustLangPref>
+         <Name>Inclusion Financiera</Name>
+         <Version>1.0</Version>
+         <RqUID>7796AAAA-685E-47b0-9C2F-27FB475B05FA</RqUID>
+         <OrgIdMatrix>Paradigma</OrgIdMatrix>
+         <OrgIdClient>Agrobanco</OrgIdClient>
+         <ShiftDate>15/03/2015</ShiftDate>
+         <ServInfo>1</ServInfo>
+         <AsesorId >jcallund</AsesorId>
+         <CustId>176578321-K</CustId>
+         <CustAppType>1</CustAppType>
+         <CustVisitDate>16/03/2015</CustVisitDate>
+         <CustBussFeasPlan>Descripción de Viabilidad Proyecto</CustBussFeasPlan>
+         <CustAdministra>Descripción Administración Proyecto</CustAdministra>
+         <CustBussBackgr>Descripción Antecedentes del Negocio</CustBussBackgr>
+         <CustConclus>Descripción Conclusión</CustConclus>
+         <CustRisks>Descripción Riesgos</CustRisks>
+         <CustNumbEmpl>5</CustNumbEmpl>
+         <CustNumbEmplSS>4</CustNumbEmplSS>
+         <CustCredJust>on</CustCredJust>
+         <CustLocLength>56º 47' 13.1761"</CustLocLength>
+         <CustLocLatitu>5º 30' 56.456"</CustLocLatitu>
+         <CustAuditDate>23/10/2013</CustAuditDate>
+         <CustAuditTime>16:08:15</CustAuditTime>
+         <CustSituation>7</CustSituation>
+      </CustInfo>
+</ifx>

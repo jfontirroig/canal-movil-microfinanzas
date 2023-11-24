@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+    <head>
+	 <title>Canal M&oacute;vil Microfinanzas</title>
+     <META HTTP-EQUIV="Refresh" CONTENT="600;URL=index.html">
+     <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!--//Esto es jQuery css and js-->
+	 <link rel="stylesheet" href="jquery/css/jquery.mobile-1.3.1.css" />
+	 <script src="jquery/js/jquery-1.9.1.min.js"></script>
+     <script src="js/loading.js"></script>
+    
+	 <script src="jquery/js/jquery.mobile-1.3.1.min.js"></script>
+
+     <!--//Globalizacion (Traduccion)-->
+	 <script src="globalization/traduccion.js"></script>
+
+   <!--//Foundation js and css-->
+     <link rel="stylesheet" href="foundX1/css/normalize.css" />
+     <link rel="stylesheet" href="foundX1/css/foundation.css" />
+     <script src="foundX1/js/custom.modernizr.js"></script> 
+     
+     <link rel="stylesheet" href="css/app.css" />
+ <!-- CSS -->
+     <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+     <link rel="stylesheet" href="css/appsegundo.css" type="text/css" charset="utf-8" />
+
+	 <!--//Cordova (Phonegap)-->
+	 <script src="cordova.js"></script>
+
+     <!-- main-->
+     <script type="text/javascript" src="js/main.js"></script>
+        
+	 <!-- Database Sqlite -->
+     <script type="text/javascript" src="js/sqlite.js"></script>
+ 
+     <script type="text/javascript" src="js/sincronizacion.js"></script>
+
+ 	 <!-- additions al ultimo-->
+     <link rel="stylesheet" type="text/css" href="jquery/css/additions.css">
+    <style>
+   	.listItemNoIcon .ui-icon
+		{
+			display: none;
+		}
+		 div#menubottom {
+			 width: 100%;
+			 background-color: #A29191;
+			 opacity:0.8;			 
+			 position:fixed;
+			 bottom: 0;
+			 left: 0%;
+			 display:none;
+		     z-index:1; 
+         }
+		 p.pos_menu
+		 {
+		 	 top:120px;
+		 	 text-align: center;
+		 	 color:white;
+		 	 text-shadow: -2px 2px 3px #292931;
+		 }		 
+     </style>
+        
+     <style>
+        #ulMenuDerecha {
+            position:relative;
+            width: 450px;
+            margin:20px auto 100px;
+        }
+        #ulMenuDerecha li {
+            width:450px;
+        }
+        #ulMenuDerecha a {
+            display: block;
+            width:450px;
+            color: #000;
+            text-decoration:none;
+            text-align:left;
+        }
+        #ulMenuDerecha a img {
+            border:0;
+        }
+        #ulMenuDerecha a:hover,
+            #ulMenuDerecha a:focus:hover {
+            color: #fff; 
+            background:#0A0527;
+        }
+        #ulMenuDerecha a:active,
+            #ulMenuDerecha a:focus {
+            color:#fff;
+            background-color:#0A0527;
+        }
+        #ulMenuDerecha a span {display: none;}
+        #ulMenuDerecha a:active span,
+        #ulMenuDerecha a:focus span {
+            display: block;
+            position: absolute; 
+            top: 0; 
+            left: 170px; 
+            width: 50px;
+            color:red;
+            background:#fff;
+        } 
+     </style>
+     </head>
+    
+  <body onload="init()">
+        <!-- Settings edit page -->
+         <div data-role="page" id="settings_page" data-theme="d">
+             <div id="nav" data-role="header">
+                 <script language="javascript">navSearch();</script>
+             </div>
+             <div data-role="content">
+			   <form name="form1" action="search.html" rel="external" method="post"> 		
+                 <div class="row" id="divsearch">
+ 						 <!--<label id="labelsearch" for="lenguaje" data-mini="true"><script language="javascript">labelSearch();</script></label>-->
+                         <script language="javascript">inputSearch();</script>
+ 						 <a href="#" class="large button expand"  onclick="searchBoton();" rel="external" style="color:white; background-color:#336699;" id="botonsearch"><script type="text/javascript"> botonSearch();</script></a>
+                  </div>
+                  <div id="resultadobusqueda">
+                     <ul id="ulMenuDerecha" data-role="listview" data-icon="false" data-theme="i">
+                         <script type="text/javascript"> 
+                             llenaSearch1();
+                             leeTablaDatoBasicoAcreditado_Search_1();
+                             llenaSearch2();
+                             leeTablaDatoBasicoAcreditado_Search_2();
+                             llenaSearch3();
+                             leeTablaDatoBasicoAcreditado_Search_3();
+                             llenaSearch4();
+                             leeTablaDatoBasicoAcreditado_Search_4();
+                             llenaSearch7();
+                             leeTablaDatoBasicoAcreditado_Search_7();
+                             llenaSearch8();
+                             leeTablaDatoBasicoAcreditado_Search_8();
+                         </script>           
+                     </ul>
+                  </div>
+                </form>
+             </div>
+
+     	  <!--menu bottom-->
+     		 <div id="menubottom">
+     	          <table align="center" height="175" style="background-color: #A1CAF1; border: 0.5px solid; border-color:#3B444B;" width="100%">
+         
+     <tr style="background-color: #A1CAF1;">
+     	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="log-on.html" rel="external" id="home" style="color:#FFF7F0;"><img src="images/home32x32.png" /><br><script type="text/javascript"> menuBottomHome();</script></a></center></td>
+
+     	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="search.html" rel="external" id="search" style="color:#FFF7F0;"><img src="images/search32x32.png" /><br><script type="text/javascript"> menuBottomSearch();</script></a></center></td>
+     </tr>
+     <tr style="background-color: #A1CAF1;">
+     	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="acercade.html" rel="external" id="about" style="color:#FFF7F0;"><img src="images/about32x32.png" /><br><script type="text/javascript"> menuBottomAbout();</script></a></center></td>
+     	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="#" onclick="exitAppPopup();" id="exit" style="color:#FFF7F0;"><img src="images/exit32x32.png"/><br><script type="text/javascript"> menuBottomExit();</script></a></center></td> 
+     </tr>
+     	    </table>
+     </div>   <!--end Menu-->  
+            
+
+             <div data-role="footer" data-theme="i" data-position="fixed">
+                  <h3>® Paradigma Mobilit&eacute;</h3>
+             </div><!-- footer -->
+         </div>
+	 </body>
+</html>

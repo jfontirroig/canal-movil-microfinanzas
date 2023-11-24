@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="es"> <!--<![endif]-->
+  <head>
+	 <title>Canal M&oacute;vil Microfinanzas</title>
+     <META HTTP-EQUIV="Refresh" CONTENT="600;URL=index.html">
+     <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!--//Esto es jQuery css and js-->
+	 <link rel="stylesheet" href="jquery/css/jquery.mobile-1.3.1.css" />
+	 <script src="jquery/js/jquery-1.9.1.min.js"></script>
+	 <script src="jquery/js/jquery.mobile-1.3.1.min.js"></script>
+ 
+	 <!--//Foundation js and css-->
+     <link rel="stylesheet" href="foundX1/css/normalize.css" />
+     <link rel="stylesheet" href="foundX1/css/foundation.css" />
+     <script src="foundX1/js/custom.modernizr.js"></script> 
+    
+     <link rel="stylesheet" href="css/app.css" />
+     <script src="jquery/js/jquery-ui.js"></script>
+
+     <!-- main-->
+     <script type="text/javascript" src="js/main.js"></script>
+        
+     <!-- database SQLite-->
+     <script type="text/javascript" src="js/sqlite.js"></script>
+     <!--<script type="text/javascript"> localStorage.removeItem('fechaturno');</script>-->
+
+     <!--//Globalizacion (Traduccion)-->
+	 <script src="globalization/traduccion.js"></script>
+  
+     <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+     <link rel="stylesheet" href="css/appsegundo.css" type="text/css" charset="utf-8" />
+    
+     <!-- additions al ultimo-->
+     <link rel="stylesheet" type="text/css" href="jquery/css/additions.css">
+ 
+     <style>
+         #elmedio {
+	         position:absolute; z-index:1;
+			 top:45px; bottom:5px; left:0;
+			 width:100%;
+			 height:100%;
+			 overflow:auto;
+		 }    
+     </style>
+
+	 <script language="javascript">
+	     if(location.search.substr(1)){
+			 Variables = location.search.substr(1).split ('&');
+			 for (i = 0; i < Variables.length; i++) {
+			     Separ = Variables[i].split('=');
+			     eval ('var '+Separ[0]+'="'+Separ[1]+'"');
+			 }
+	     }
+	     document.getElementById('target').value = id;
+	 </script>
+
+	 <script language="javascript">
+		function initialize() {
+			 var mapOptions = {
+						  center: new google.maps.LatLng(-33.41625861510747, -70.59406939563746),
+						  zoom: 15,
+						  mapTypeId: google.maps.MapTypeId.ROADMAP
+			 };
+			 var map = new google.maps.Map(document.getElementById("map_canvas"),
+						  mapOptions);
+
+             initialize2();
+		}
+	 </script>
+  </head>
+  
+  <body onload="initialize()";> 
+     <div data-role="header" data-position="fixed" data-theme="i">
+          <div class="row">
+               <input id="target" name="tarjet" type="text" placeholder="Busqueda" style="background-color: #A29191;">
+	                  <script>
+					         document.getElementById('target').value = localStorage.getItem('direccion');
+					  </script>
+          </div>    
+     </div><!-- /header -->
+     <div data-role="content">
+          <div class="row">	
+               <div id="elmedio">
+                    <div id="map_canvas" style="width:100%; height:100%;"></div>
+                </div>
+           </div>
+ 	 </div>
+     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&language=es"></script>
+	 <script src="js/mapbusqueda.js"></script>
+
+	 <!-- Included JS Files -->
+		 <div id="nav" data-role="footer" data-position="fixed" data-theme="i">
+                 <script language="javascript">navBusqueda();</script>
+		 </div><!-- /header -->
+	 <script src="jquery/js/jquery.min.js"></script>
+  </body>
+</html>

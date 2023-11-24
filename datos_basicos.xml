@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<ifx> 
+   <PartyInfo>
+       <SessKey>ABCDEFGHIJKLMNOPQRSTUVWXYZYXWVUTSRQPONML</SessKey>
+       <CustLangPref>ESP</CustLangPref>
+       <Name>Inclusion Financiera</Name>
+       <Version>1.0</Version>
+       <RqUID>7796AAAA-685E-47b0-9C2F-27FB475B05FA</RqUID>
+       <OrgIdMatrix>Paradigma</OrgIdMatrix>
+       <OrgIdClient>Agrobanco</OrgIdClient>
+       <ShiftDate>15/03/2015</ShiftDate>
+       <ServInfo>1</ServInfo>
+       <AsesorId >jcallund</AsesorId>
+       <CustId>12435192-5</CustId>
+       <CustNames>Andrea</CustNames>
+       <CustFtLastName>Galleguillos</CustFtLastName>
+       <CustSdLastName>Alvarez</CustSdLastName>
+       <CustSex>F</CustSex>
+       <CustAddress>Apoquindo 5673</CustAddress>
+       <CustSector>12</CustSector>
+       <CustCity>5</CustCity>
+       <CustState>13</CustState>
+       <CustCountry>56</CustCountry>
+       <CustPhone>5622345643</CustPhone>
+       <CustCellular>98783455</CustCellular>
+       <CustEmail>agalleguillos123@gmail.com</CustEmail>
+       <CustWebPage>linkedin.cl/agalleguillos</CustWebPage>
+   </PartyInfo>
+   <PartyInfo>
+       <SessKey>ABCDEFGHIJKLMNOPQRSTUVWXYZYXWVUTSRQPONML</SessKey>
+       <CustLangPref>ESP</CustLangPref>
+       <Name>Inclusion Financiera</Name>
+       <Version>1.0</Version>
+       <RqUID>7796AAAA-685E-47b0-9C2F-27FB475B05FA</RqUID>
+       <OrgIdMatrix>Paradigma</OrgIdMatrix>
+       <OrgIdClient>Agrobanco</OrgIdClient>
+       <ShiftDate>15/03/2015</ShiftDate>
+       <ServInfo>1</ServInfo>
+       <AsesorId >jcallund</AsesorId>
+       <CustId>17658768-K</CustId>
+       <CustNames>Fernando</CustNames>
+       <CustFtLastName>Silva</CustFtLastName>
+       <CustSdLastName>Alvarez</CustSdLastName>
+       <CustSex>M</CustSex>
+       <CustAddress>Bulnes 345</CustAddress>
+       <CustSector>19</CustSector>
+       <CustCity>5</CustCity>
+       <CustState>13</CustState>
+       <CustCountry>56</CustCountry>
+       <CustPhone>5622456789</CustPhone>
+       <CustCellular>98435469</CustCellular>
+       <CustEmail>afsilva@yahoo.es</CustEmail>
+       <CustWebPage>linkedin.cl/fsilva</CustWebPage>
+   </PartyInfo>
+ </IFX>

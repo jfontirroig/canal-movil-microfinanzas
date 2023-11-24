@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "cl.paradigma.paradigmaMicroFinanzas"
+        version   = "1.0">
+    <name>Canal Movil Microfinanzas</name>
+    <description>
+        Es una aplicacion de Banca Movil para Microfinanzas.
+    </description> 
+
+    <author href="http://paradigma.cl" email="proe@paradigma.cl">
+        Paradigma Mobilite.
+    </author>
+	
+	<feature name="http://api.phonegap.com/1.0/device" />
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	<feature name="http://api.phonegap.com/1.0/media"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="Notification">
+    	 <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Vibration">
+    	 <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+	
+	<source-file src="src/android/Notification.java" target-dir="src/org/apache/cordova/dialogs" />
+
+	<js-module src="js/notification.js" name="notification">
+        <merges target="navigator.notification" />
+    </js-module>
+
+    <js-module src="plugins/notification.js" name="notification_android">
+        <merges target="navigator.notification" />
+    </js-module>
+
+
+    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="target-device"    value="universal" />
+	<preference name="splash-screen-duration" value="4000" />
+	<preference name="android-minSdkVersion" value="5" />
+	<icon src="images/iconoDE.png" />
+	<!-- Define app splash screen for each platform. -->
+	
+	<gap:splash src="res/n320x426.png" gap:platform="android" gap:density="ldpi"  width="320" height="426" />
+	<gap:splash src="sres/n320x470.png" gap:platform="android" gap:density="mdpi"  width="320" height="470" />
+	<gap:splash src="res/n480x640.png" gap:platform="android" gap:density="hdpi"  width="480" height="640" />
+	<gap:splash src="res/n720x960.png" gap:platform="android" gap:density="xhdpi" width="720" height="960" />
+    
+    <plugin name="Capture" value="org.apache.cordova.Capture"/>
+	<plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+	<plugin name="Camera" value="CDVCamera" />
+	<plugin name="File" value="org.apache.cordova.FileUtils" />
+	<plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
+    <plugin name="SmsPlugin" value="org.apache.cordova.plugin.SmsPlugin"/>
+    <plugin name="PushNotification" value="com.adobe.plugins.pushplugin" />
+    <plugin name="ScreenOrientation" value="com.tsukurusha.phonegap.plugins.ScreenOrientation" />
+
+    <access origin="*://*.googleapis.com/*" subdomains="true" />
+    <access origin="*://*.gstatic.com/*" subdomains="true" />
+    <access origin="*://*.google.com/*" subdomains="true" />
+    <access origin="*://*.googleusercontent.com/*" subdomains="true" />
+
+    <access origin="http://166.78.238.97" />
+	<access origin="*" />

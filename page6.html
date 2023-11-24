@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<title>Canal M&oacute;vil Microfinanzas</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <META HTTP-EQUIV="Refresh" CONTENT="600;URL=index.html">
+    
+    <!--//Esto es jQuery css and js-->
+	<link rel="stylesheet" href="jquery/css/jquery.mobile-1.3.1.css" />
+	<script src="jquery/js/jquery-1.9.1.min.js"></script>
+     <script src="js/loading.js"></script>
+	<script src="jquery/js/jquery.mobile-1.3.1.min.js"></script>
+
+	 <!--//Cordova (Phonegap)-->
+	 <script src="cordova.js"></script>
+
+    <!-- main-->
+     <script type="text/javascript" src="js/main.js"></script>
+        
+	 <!-- Database Sqlite -->
+     <script type="text/javascript" src="js/sqlite.js"></script>
+ 
+    <!--//Foundation js and css-->
+    <link rel="stylesheet" href="foundX1/css/normalize.css" />
+    <link rel="stylesheet" href="foundX1/css/foundation.css" />
+    <script src="foundX1/js/custom.modernizr.js"></script> 
+
+	 <!--//Globalizacion (Traduccion)-->
+	 <script src="globalization/traduccion.js"></script>
+
+     <script>
+         $(document).on('pagebeforecreate', '[data-role="page"]', function(){     
+            setTimeout(function(){
+               $.mobile.loading('show');
+            },1);    
+         });
+     </script>
+    
+<!-- este codigo es para ayudar al menu de la izquierda: jquery -->    
+<script>
+$( "#MenuIzquierda" ).trigger( "updatelayout" );
+</script>
+
+<!-- Modificaciones al CSS de jquery framework y otras modificaciones, este tiene que ir al final de la <head> -->
+<link rel="stylesheet" href="css/app.css" />
+
+<!-- Responsive Tables-->
+<link rel="stylesheet" href="foundX1/js/responsive-tables.css"><script src="foundX1/js/responsive-tables.js"></script>
+
+<style>
+.pagination-centered {
+  text-align: left; font-size: 13px; color:#CC0000;}
+  
+  .pagination-centered ul > li {
+    float: none;
+    display: inline-block;
+	}
+</style>
+<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="appsegundo.css" type="text/css" charset="utf-8" />
+<style>
+
+.ui-body-i {
+  background-color: #292931;
+  color: white;
+   text-shadow:black; 
+}
+
+li.activadomenu {
+color:#2F8CAB;
+text-shadow: -2px 2px 3px #003;
+}
+
+a.activadomenuDos {
+color:#FCF5EB;
+text-shadow: -2px 2px 3px #292931;
+}
+
+a.activadocerrar {
+color:#F08A00;
+text-shadow: -2px 2px 3px #292931;
+}
+
+th.active1 {color:#F08A00;
+}
+td.active1 {color:#F08A00;
+}
+		 div#menubottom {
+			 width: 100%;
+			 background-color: #A29191;
+			 opacity:0.8;			 
+			 position:fixed;
+			 bottom: 0;
+			 left: 0%;
+			 display:none;
+		     z-index:1; 
+         }
+		 p.pos_menu
+		 {
+		 	 top:120px;
+		 	 text-align: center;
+		 	 color:white;
+		 	 text-shadow: -2px 2px 3px #292931;
+		 }		 
+</style>
+
+<style type="text/css">  <!--Pseudo-classes -->
+    a#ahrefpage6:link {TEXT-DECORATION: none;}      
+    a#ahrefpage6:visited {COLOR: gray; TEXT-DECORATION: none;}      
+    a#ahrefpage6:active {color: blue; TEXT-DECORATION: none;}       
+    a#ahrefpage6:hover {color: blue; TEXT-DECORATION: none;}    
+</style>
+
+</head>
+
+  <body onload="init()">
+<div data-role="page" id="paginax">
+    	 <div data-role="panel" id="MenuIzquierda" data-position-fixed="true" data-theme="i" data-dismissible="true">
+         	 <ul id="ulMenuIzquierda" data-role="listview" data-icon="false" data-theme="i">
+               <script type="text/javascript"> llenaMenuIzquierdo();</script>
+        	 </ul>
+    	 </div><!-- /panel -->
+		 <!--Right panel menu-->
+		 <div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" data-theme="i" id="add-form" data-dismissible="true">
+			 <ul id="ulMenuDerecha" data-role="listview" data-icon="false" data-theme="i">
+                 <script type="text/javascript"> 
+				             llenaMenuDerecha1();
+					 leeTablaDatoBasicoAcreditado_VentanaDerecha_1();
+                     llenaMenuDerecha2();
+					 leeTablaDatoBasicoAcreditado_VentanaDerecha_2();
+                     llenaMenuDerecha3();
+					 leeTablaDatoBasicoAcreditado_VentanaDerecha_3();
+                     llenaMenuDerecha4();
+					 leeTablaDatoBasicoAcreditado_VentanaDerecha_4();
+                    llenaMenuDerecha7();
+           leeTablaDatoBasicoAcreditado_VentanaDerecha_7();
+                    llenaMenuDerecha8();
+           leeTablaDatoBasicoAcreditado_VentanaDerecha_8();
+				 </script>           
+			 </ul>
+		 </div>
+
+<!-- /panel -->    
+		 <div data-role="header" data-theme="i" class="ui-widget-header">
+		     <a href="#MenuIzquierda" data-role="button" data-inline="true" data-corners="false" data-theme="i" data-shadow="false" data-iconshadow="false" style="padding: none !important; border: none !important; background: none !important;-moz-box-shadow: 0px 0px 0px transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 0px #292931;
+box-shadow: 0px 0px 0px 0px #292931;"><img src="images/lelfMenu.png" width="30px" height="30px"></a>
+
+		     <a href="#add-form" data-role="button" data-inline="true" data-corners="false" data-theme="i" data-shadow="false" data-iconshadow="false" style="padding: none !important; border: none !important; background: none !important;-moz-box-shadow: 0px 0px 0px transparent !important;
+  -webkit-box-shadow: 0px 0px 0px 0px #292931;
+box-shadow: 0px 0px 0px 0px #292931;"><img src="images/50px-Icon-community.png" width="30px" height="30px"></a>
+		 </div><!-- header -->
+	
+<div data-role="content">
+              
+            <br>
+    		<div class="panel">
+  			 <div class="row">
+               <div class="small-4 columns"><img src="images/checkmark.png">
+			   </div>
+              <div id="page6titulo" class="small-8 columns" style="vertical-align: middle;">
+		             <script type="text/javascript"> page6Titulo();</script>			       
+			  </div>
+             </div>
+            </div>
+              
+  <div class="row">
+<table data-role="table" id="table-column-toggle" data-column-btn-text="..." data-mode="columntoggle" class="ui-responsive table-stroke">
+     <thead>
+       <tr>
+         <th data-priority="2">ID</th>
+		 <th id="page6subtitulo2" ><script type="text/javascript"> page6Subtitulo2();</script></th>
+		 <th id="page6subtitulo3" data-priority="1"><script type="text/javascript"> page6Subtitulo3();</script></th>
+         <th></th>
+        </tr>
+     </thead>
+     <script type="text/javascript">
+    		leeTablaDatoBasicoAcreditado_Page_6();
+	 </script>     
+
+     <tbody>
+       <tr>
+      <tr>
+         <td class="active2" id="idpage6" name="idpage6"></td>
+		 <td class="active2" id="clientespage6" name="clientespage6"></td>
+		 <td class="active2" id="montorecaudado6" name="montorecaudado6"></td>
+		 <td class="active2" id="comprobante" name="comprobante"></td>
+      </tr>
+     </tbody> 
+	 
+   </table>
+   </div>
+	  <!--menu bottom-->
+		 <div id="menubottom">
+	          <table align="center" height="175" style="background-color: #A1CAF1; border: 0.5px solid; border-color:#3B444B;" width="100%">
+         
+<tr style="background-color: #A1CAF1;">
+	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="log-on.html" rel="external" id="home" style="color:#FFF7F0;"><img src="images/home32x32.png" /><br><script type="text/javascript"> menuBottomHome();</script></a></center></td>
+
+	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="search.html" rel="external" id="search" style="color:#FFF7F0;"><img src="images/search32x32.png" /><br><script type="text/javascript"> menuBottomSearch();</script></a></center></td>
+</tr>
+<tr style="background-color: #A1CAF1;">
+	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="acercade.html" rel="external" id="about" style="color:#FFF7F0;"><img src="images/about32x32.png" /><br><script type="text/javascript"> menuBottomAbout();</script></a></center></td>
+	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="#" onclick="exitAppPopup();" id="exit" style="color:#FFF7F0;"><img src="images/exit32x32.png"/><br><script type="text/javascript"> menuBottomExit();</script></a></center></td> 
+</tr>
+	    </table>
+</div>   <!--end Menu-->  
+              
+          
+         
+</div><!-- content -->
+         <div data-role="footer" data-theme="i"  data-position="fixed">
+             <h3>® Paradigma Mobilit&eacute;</h3>
+         </div> <!--footer -->
+
+</div><!-- page -->
+<script><!-- este javascript es para la barra de porcentaje-->
+  $('.bar-percentage[data-percentage]').each(function () {
+   var percentage = Math.ceil($(this).attr('data-percentage')) + '%';
+  $(this).text(percentage) && $(this).siblings().children().css('width',percentage);
+});
+  </script>
+  
+  <script type="text/javascript" src="foundX1/js/foundation.js"></script>
+
+      <script>
+            $(document).on('pageshow', '[data-role="page"]', function(){  
+                setTimeout(function(){
+                    $.mobile.loading('hide');
+                },300);      
+            });
+	 </script>
+ 
+ 
+</body>
+</html>

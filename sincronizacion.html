@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+    <head>
+	 <title>Canal M&oacute;vil Microfinanzas</title>
+     <META HTTP-EQUIV="Refresh" CONTENT="600;URL=index.html">
+     <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!--//Esto es jQuery css and js-->
+	 <link rel="stylesheet" href="jquery/css/jquery.mobile-1.3.1.css" />
+	 <script src="jquery/js/jquery-1.9.1.min.js"></script>
+     <script src="js/loading.js"></script>
+    
+	 <script src="jquery/js/jquery.mobile-1.3.1.min.js"></script>
+
+     <!--//Globalizacion (Traduccion)-->
+	 <script src="globalization/traduccion.js"></script>
+
+   <!--//Foundation js and css-->
+     <link rel="stylesheet" href="foundX1/css/normalize.css" />
+	   <!--<link rel="stylesheet" href="foundX1/css/foundation.css" /> -->
+     <script src="foundX1/js/custom.modernizr.js"></script> 
+     
+     <link rel="stylesheet" href="css/app.css" />
+ <!-- CSS -->
+     <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+     <link rel="stylesheet" href="css/appsegundo.css" type="text/css" charset="utf-8" />
+
+	 <!--//Cordova (Phonegap)-->
+	 <script src="cordova.js"></script>
+
+     <!-- main-->
+     <script type="text/javascript" src="js/main.js"></script>
+        
+	 <!-- Database Sqlite -->
+     <script type="text/javascript" src="js/sqlite.js"></script>
+ 
+     <script type="text/javascript" src="js/sincronizacion.js"></script>
+
+ 	 <!-- additions al ultimo-->
+     <link rel="stylesheet" type="text/css" href="jquery/css/additions.css">
+ 
+     <!-- Graficos CSS-->
+     <link rel="stylesheet" href="css/barra.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+	 <script>
+		$(function() {
+			$(".meter > span").each(function() {
+				$(this)
+					.data("origWidth", $(this).width())
+					.width(0)
+					.animate({
+						width: $(this).data("origWidth")
+					}, 1200);
+			});
+		});
+	 </script>
+
+	<style>
+		.listItemNoIcon .ui-icon
+			{
+				display: none;
+			}
+			 div#menubottom {
+				 width: 100%;
+				 background-color: #A29191;
+				 opacity:0.8;			 
+				 position:fixed;
+				 bottom: 0;
+				 left: 0%;
+				 display:none;
+				 z-index:1; 
+			 }
+			 p.pos_menu
+			 {
+				 top:120px;
+				 text-align: center;
+				 color:white;
+				 text-shadow: -2px 2px 3px #292931;
+
+			 }		 
+		
+     </style>
+     </head>
+    
+  <body onload="init()">
+        <!-- Settings edit page -->
+         <div data-role="page" id="settings_page" data-theme="d">
+             <div id="nav" data-role="header">
+                 <script language="javascript">navSincronizacion();</script>
+             </div>
+            
+			 <div class="row">
+			     <div class="small-11 small-centered columns">
+			     <!-- Barra Uno  -->
+					 <div id="syncrecibir">
+						 <br>
+						 <script type="text/javascript"> tituloSyncRecibir();</script>
+						 <div id="barra1" class="meter orange nostripes">
+						 </div>
+						 <div align="right" class="abajoNumero" name="c4" id="c4"></div>
+					 </div>
+			     <!-- End Barra Uno -->
+				 </div><!--class-->
+			 </div><!--row-->     
+					 
+			 <!-- Barra Dos  -->
+   			 <div class="row">
+   			    <div class="small-11 small-centered columns">
+					 <div id="syncenviar">
+							<br>
+							<script type="text/javascript"> tituloSyncEnviar();</script>
+							<div id="barra2" class="meter orange nostripes">
+							</div>
+						    <div align="right" class="abajoNumero" name="c5" id="c5"></div>
+					 </div>
+					 <!-- End Barra Dos -->
+			    </div><!--class-->
+			 </div><!--row-->      
+        </div>     
+   	    <!--menu bottom-->
+    	<div id="menubottom">
+			 <table align="center" height="175" style="background-color: #A1CAF1; border: 0.5px solid; border-color:#3B444B;" width="100%">
+				<tr style="background-color: #A1CAF1;">
+					<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="log-on.html" rel="external" id="home" style="color:#FFF7F0;"><img src="images/home32x32.png" /><br><script type="text/javascript"> menuBottomHome();</script></a></center></td>
+					<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="search.html" rel="external" id="search" style="color:#FFF7F0;"><img src="images/search32x32.png" /><br><script type="text/javascript"> menuBottomSearch();</script></a></center></td>
+				</tr>
+				<tr style="background-color: #A1CAF1;">
+					<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="acercade.html" rel="external" id="about" style="color:#FFF7F0;"><img src="images/about32x32.png" /><br><script type="text/javascript"> menuBottomAbout();</script></a></center></td>
+					<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="#" onclick="exitAppPopup();" id="exit" style="color:#FFF7F0;"><img src="images/exit32x32.png"/><br><script type="text/javascript"> menuBottomExit();</script></a></center></td> 
+				</tr>
+			 </table>
+        </div>     
+             
+         <div data-role="footer" data-theme="i" data-position="fixed">
+             <h3>® Paradigma Mobilit&eacute;</h3>
+         </div><!-- footer -->
+         </div>
+	 </body>
+</html>

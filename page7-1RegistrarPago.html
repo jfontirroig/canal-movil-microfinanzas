@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]>--><html class="no-js" lang="es"><!--<![endif]-->
+  <head>
+ 	 <title>Canal M&oacute;vil Microfinanzas</title>
+     <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+     <META HTTP-EQUIV="Refresh" CONTENT="600;URL=index.html">
+
+     <!--//Esto es jQuery css and js-->
+	 <link rel="stylesheet" href="jquery/css/jquery.mobile-1.3.1.css" />
+	 <script src="jquery/js/jquery-1.9.1.min.js"></script>
+     <script src="js/loading.js"></script>
+	 <script src="jquery/js/jquery.mobile-1.3.1.min.js"></script>
+
+	 <!--//Cordova (Phonegap)-->
+	 <script src="cordova.js"></script>
+
+      <!-- main-->
+     <script type="text/javascript" src="js/main.js"></script>
+        
+	 <!-- Database Sqlite -->
+     <script type="text/javascript" src="js/sqlite.js"></script>
+ 
+     <!--//Foundation js and css-->
+     <link rel="stylesheet" href="foundX1/css/normalize.css" />
+     <link rel="stylesheet" href="foundX1/css/foundation.css" />
+     <script src="foundX1/js/custom.modernizr.js"></script> 
+	 
+	 <!--//Globalizacion (Traduccion)-->
+	 <script src="globalization/traduccion.js"></script>
+
+      <script>
+         $(document).on('pagebeforecreate', '[data-role="page"]', function(){     
+            setTimeout(function(){
+               $.mobile.loading('show');
+            },1);    
+         });
+     </script>
+        
+     <!-- este script es para ayudar al menu de la izquierda: jquery -->    
+     <script>
+         $( "#MenuIzquierda" ).trigger( "updatelayout" );
+     </script>
+
+     <!-- Modificaciones al CSS de jquery framework y otras modificaciones, este tiene que ir al final de la <head> -->
+     <link rel="stylesheet" href="css/app.css" />
+     <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+     <link rel="stylesheet" href="css/appsegundo.css" type="text/css" charset="utf-8" />
+	 <!-- additions al ultimo-->
+     <link rel="stylesheet" type="text/css" href="jquery/css/additions.css">
+
+     <style>
+         td.hola {
+			 background-color:#66B7E3;
+			 font-size:16px;
+			 color:#FFFFFF;
+			 text-shadow: -2px 2px 3px #66B7E3;
+		 }
+		   
+		 td.como {
+			 background-color:#F8BD67;
+			 font-size:16px;
+			 color:#FFFFFF;
+			 text-shadow: -2px 2px 3px #F8BD67;
+		 }
+		 a.boton {
+			 background-color:#587498;
+			 font-size:16px;
+			 color:#F5FAFA;
+		 }
+     </style>
+	 <style>
+		 .ui-body-i {
+			 background-color: #292931;
+			 color: white;
+			 text-shadow:black; 
+		 }
+
+		 li.activadomenu {
+			 color:#2F8CAB;
+			 text-shadow: -2px 2px 3px #003;
+		 }
+
+		 a.activadomenuDos {
+			 color:#FCF5EB;
+			 text-shadow: -2px 2px 3px #292931;
+		 }
+
+		 a.activadocerrar {
+			 color:#F08A00;
+			 text-shadow: -2px 2px 3px #292931;
+		 }
+		 div#menubottom {
+			 width: 100%;
+			 background-color: #A29191;
+			 opacity:0.8;			 
+			 position:fixed;
+			 bottom: 0;
+			 left: 0%;
+			 display:none;
+		     z-index:1; 
+         }
+		 p.pos_menu
+		 {
+		 	 top:120px;
+		 	 text-align: center;
+		 	 color:white;
+		 	 text-shadow: -2px 2px 3px #292931;
+
+		 }		 
+     </style>
+  </head>
+  <body onload="init()">
+  <script language="javascript">
+		 leeTablaEmpresaMatrizID();
+		 leeTablaEmpresaClienteID();
+		 leeTablaAsesorPromotorID();
+		 getIDPage7_2();
+  </script>
+
+  <div data-role="page">
+             <div id="nav" data-role="header" data-position="fixed">
+                 <script language="javascript">navPage71RegistrarPago();</script>
+             </div>
+			
+		 <div data-role="content">
+			 
+             <form name="form1" action="page7-1RegistrarPago.html" rel="external" method="post"> 		
+				 <div id="page7titulo" align="center">
+				      <script type="text/javascript"> page7Titulo();</script>			       
+				 </div>
+  				 <div class="panel">
+                	 <div class="row">
+			             <div class="small-6 large-5 columns"><img src="images/Julie_Taylor.jpg" width="70" height="70"></div>
+                         <div class="small-6 large-7 columns">
+                             <div name="nombreclientex" id="nombreclientex" class="caja1"></div>
+                             <div name="idclientex" id="idclientex" class="caja2"></div>
+                         </div>
+					     <input type="hidden" id="XYZidcliente"></input>
+					     <input type="hidden" id="XYZidempresamatriz"></input>
+					     <input type="hidden" id="XYZidempresacliente"></input>
+					     <input type="hidden" id="XYZidasesorpromotor"></input>
+					     <input type="hidden" id="saldo"></input>
+                        
+                     </div>
+                      
+		         </div>
+                 <div class="row" id="tituloregistrarpago" align="center"><script type="text/javascript"> page71TituloRegistrarPago();</script></div>
+		         <div class="row">
+				     <table>
+								  
+					     <tbody>
+						     <tr>
+								 <td class="hola" width="100" id="numerocontrato"><script type="text/javascript"> page31NumeroContrato();</script></td>
+								 <td width="100%" name="c2" id="c2"></td> 
+							 </tr>
+							 <tr>
+                                 <td class="como" width="100" id="montocredito"><script type="text/javascript"> page71MontoAhorro();</script></td>
+								 <td width="100%" name="c7" id="c7"></td>
+							 </tr>
+							 <tr>
+                                 <td class="hola" width="100" id="fechavencto"><script type="text/javascript"> page71FechaVencimiento();</script></td>
+								 <td width="100%" name="c8" id="c8"></td>
+							 </tr>
+							 <tr>
+								 <td class="como" id="montocancelado"><script type="text/javascript"> page51MontoCancelado();</script></td>
+								 <td width="100%" id="inputmontocancelado"><script type="text/javascript"> page51InputMontoCancelado();</script></td>
+							 </tr>
+						 </tbody>
+					 </table>
+                     <div class="row">
+                         <script language="javascript">
+   					         llenaComboChecklist();
+                             defaultChecklist();
+                         </script>
+                     <label id="situacion" for="textarea" class="active1"><script type="text/javascript"> page21Situacion();</script></label>
+                         <select name="combo2" id="combo2" ></select>
+                     </div>   
+		             <!--<div class="row">
+                         <center><button onclick="guardarRecuperacionCredito();"> GUARDAR </button></center>
+        		     </div>-->
+		         </div>
+				 
+		     </form><!--final form -->   
+	  <!--menu bottom-->
+		 <div id="menubottom">
+	          <table align="center" height="175" style="background-color: #A1CAF1; border: 0.5px solid; border-color:#3B444B;" width="100%">
+         
+<tr style="background-color: #A1CAF1;">
+	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="log-on.html" rel="external" id="home" style="color:#FFF7F0;"><img src="images/home32x32.png" /><br><script type="text/javascript"> menuBottomHome();</script></a></center></td>
+
+	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="search.html" rel="external" id="search" style="color:#FFF7F0;"><img src="images/search32x32.png" /><br><script type="text/javascript"> menuBottomSearch();</script></a></center></td>
+</tr>
+<tr style="background-color: #A1CAF1;">
+	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="acercade.html" rel="external" id="about" style="color:#FFF7F0;"><img src="images/about32x32.png" /><br><script type="text/javascript"> menuBottomAbout();</script></a></center></td>
+	<td width="50%" style="border: 1px solid; border-color:#3B444B;"><center><a href="#" onclick="exitAppPopup();" id="exit" style="color:#FFF7F0;"><img src="images/exit32x32.png"/><br><script type="text/javascript"> menuBottomExit();</script></a></center></td> 
+</tr>
+	    </table>
+</div>   <!--end Menu-->  
+             
+		 </div><!-- content -->
+
+         <div data-role="footer" data-theme="i">
+             <h3>® Paradigma Mobilit&eacute;</h3>
+         </div> <!--footer -->
+
+     </div><!-- page -->
+     <script type="text/javascript" src="foundX1/js/foundation.js"></script>
+
+      <script>
+            $(document).on('pageshow', '[data-role="page"]', function(){  
+                setTimeout(function(){
+                    $.mobile.loading('hide');
+                },300);      
+            });
+	 </script>
+ 
+  </body>
+</html>

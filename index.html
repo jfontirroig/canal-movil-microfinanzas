@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="es"> <!--<![endif]-->
+ <head>
+	 <title>Canal M&oacute;vil Microfinanzas</title>
+     <META HTTP-EQUIV="Refresh" CONTENT="600;URL=index.html">
+     <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!---Esto debe ir siempre para que funcione phonegap, no hay necesidad de bajar el file phonegap. -->
+     <script type="text/javascript">
+        if (!navigator.userAgent.toLowerCase().match('chrome')) {
+            document.write("<script src='phonegap.js'><\/script>");
+        }
+     </script>     
+
+     <!--//Esto es jQuery css and js-->
+	 <script src="jquery/js/jquery-1.9.1.min.js"></script>
+     <script src="js/loading.js"></script>
+
+     <!--//Globalizacion (Traduccion)-->
+	 <script src="globalization/traduccion.js"></script>
+
+	 <!--//Foundation js and css-->
+     <link rel="stylesheet" href="foundX1/css/normalize.css" />
+     <link rel="stylesheet" href="foundX1/css/foundation.css" />
+     <script src="foundX1/js/custom.modernizr.js"></script> 
+
+     <!-- main-->
+     <script type="text/javascript" src="js/main.js"></script>
+        
+     <!-- //Funciones Base de Datos SQLite-->
+     <script type="text/javascript" src="js/sqlite.js"></script>
+	 
+     <!--//Screen Orientation-->
+     <!--<script type="text/javascript" charset="utf-8" src="plugins/pg-plugin-screen-orientation.js"></script>--> 
+     
+     <!-- //Inicializar LocalStorage-->
+     <script type="text/javascript"> 
+	     localStorage.removeItem('fechaturno');
+         localStorage.setItem('servicioSN', "N"); 
+         localStorage.setItem('servicioLEN', 0); 
+		 localStorage.setItem('servicioSN1', "N"); 
+		 localStorage.setItem('servicioSN2', "N"); 
+		 localStorage.setItem('servicioSN3', "N"); 
+		 localStorage.setItem('servicioSN4', "N"); 
+		 localStorage.setItem('servicioSN6', "N"); 
+		 localStorage.setItem('servicioSN7', "N"); 
+		 localStorage.setItem('menuIzquierdo', "off"); 
+		 localStorage.setItem('menuDerecho', "off"); 
+	 </script>
+         
+    <script type="text/javascript">
+        if (!navigator.userAgent.toLowerCase().match('chrome')) {
+            document.write("<script src='phonegap.js'><\/script>");
+        }
+    </script>     
+     <!-- //Funciones Javascript Cripto Library-->
+     <script type="text/javascript" src="webtoolkit.base64/webtoolkit.base64.js"></script>
+         
+	<!-- <script>
+	     $( document ).bind( "mobileinit", function() {
+         // Make your jQuery Mobile framework configuration changes here!
+
+             $.mobile.allowCrossDomainPages = true;
+			 
+         });
+    
+     </script>-->
+	 <style>
+		 html, body { background-color: #292931; }
+		 /* fieldset styling */
+		 fieldset {
+		     border: solid 1px #dddddd;
+		     padding: 1.25em;
+		     margin: 1.125em 0; 
+		 }
+		 fieldset legend {
+			 color: #F9F6F4;
+			 font-weight: bold;
+			 background: #292930;
+			 padding: 0 0.1875em;
+			 margin: 0;
+			 margin-left: -0.1875em; 
+		 }
+			
+		 div.caja1 {
+		     color:#2E263A;
+			 font-size: 19px;
+			 padding-bottom: .2cm;
+		 }	
+		 h6 {
+			 font-family: ‘Roboto’, Arial, serif; font-weight: 200;
+			 font-size: 30px; 
+			 color:#F08A00;
+			 text-align:center;
+			 position:relative;
+			 top:5px;
+			 padding-top:1px;
+			 padding-bottom:0px;
+		 }
+ 	     input {
+		     border:none;
+		     background: #FFF;
+		     width: 280px;
+	     }
+	     .rounded {
+		     background: url(images/Username.gif) no-repeat left top;
+		     padding: 8px;
+	     }
+	 </style>
+
+     <script type="text/javascript">
+         creaTablaEmpresaMatriz();
+         creaTablaAsesorPromotor();
+         /*  leeTablaEmpresaMatriz(); */
+         loginUsuarioXX();
+     </script> 
+     <script>
+         $('a.reveal-link').trigger('click');
+		 $('a.close-reveal-modal').trigger('click');
+		 $('#myModal').foundation('reveal', 'open');
+		 $('#myModal').foundation('reveal', 'close');
+	 </script>
+ </head>
+ <body>
+	 <div class="row">
+	     <div class="small-11 small-centered columns"><h6><img src="images/logo13.png"></h6></div>
+	 </div>
+	 <!--    <h5 id="nombreempresamatriz" name="nombreempresamatriz"></h5>-->                      
+	 <div class="row">
+		 <div class="small-11 small-centered columns">
+			 <form action="index.html" method="post">
+			  
+				 <div class="row collapse">
+					 <div class="small-3 large-2 columns">
+						 <span class="prefix"><img src="images/ic_user.png"></span>
+					 </div>
+					 <div id="indexusuario" class="small-9 large-10 columns">
+						 <script type="text/javascript"> indexIDUsuario();</script>
+					 </div>
+				 </div>
+			
+				 <div class="row collapse">
+					 <div class="small-3 large-2 columns">
+						 <span class="prefix"><img src="images/ic_lock.png"></span>
+					 </div>
+					 <div id="indexclave" class="small-9 large-10 columns">
+						 <script type="text/javascript"> indexContrasena();</script>
+					 </div>
+				 </div>
+				 <!-- alerts------>
+				 <input type="hidden" id="id2" name = "id2" />
+				 <input type="hidden" id="passw2" name = "passw2" />
+			   
+				 <button type="button" id="indexboton" onclick="loginUsuario();" class="large button expand"> 
+						 <script type="text/javascript"> indexBoton();</script>
+				 </button>
+			</form>
+	     </div>
+	 </div>
+ 	 <div class="row">
+		 <div class="small-11 small-centered columns">
+		     <center><a href="#" data-reveal-id="myModal">
+		     <img src="images/infoparadigma.png">
+		     </a></center>
+		 </div>
+	 </div>
+
+	 <script>
+		  document.write('<script src=' +
+		  ('__proto__' in {} ? 'foundX1/js/zepto' : 'foundX1/js/') +
+		  '.js><\/script>')
+	 </script>
+	 <script src="foundX1/js/foundation.js"></script>
+	 <script src="foundX1/js/foundation.alerts.js"></script>
+	 <!--  <script src="foundX1/js/foundation.clearing.js"></script>
+	 <script src="foundX1/js/foundation.cookie.js"></script>
+	 <script src="foundX1/js/foundation.dropdown.js"></script>-->
+	 <script src="foundX1/js/foundation.forms.js"></script>
+	 <!--  <script src="foundX1/js/foundation.joyride.js"></script>
+	 <script src="foundX1/js/foundation.magellan.js"></script>
+	 <script src="foundX1/js/foundation.orbit.js"></script>
+	 <script src="foundX1/js/foundation.placeholder.js"></script> -->
+	 <script src="foundX1/js/foundation.reveal.js"></script>
+	 <!-- <script src="foundX1/js/foundation.section.js"></script>
+	 <script src="foundX1/js/foundation.tooltips.js"></script>
+	 <script src="foundX1/js/foundation.topbar.js"></script>
+	 <script src="foundX1/js/foundation.interchange.js"></script>-->
+	 <script>
+		 $(document).foundation();
+	 </script>
+	 <!-- Una ventana para la informacion de este app -->
+	 <div id="myModal" class="reveal-modal" style="background-color: #3C5A73; color:white;">
+		 <script type="text/javascript"> indexInformacion();</script>
+	     <center style="color:white;">1.0</center><p>
+	     <center style="color:yellow;">Device ID:</center><p>
+	     <center style="color:white;"><h5>-471484-</h5></center><p></p>
+	     <a class="close-reveal-modal"><img src="images/Error1.png" width="25px" height="25px"></a>
+	 </div>
+	 <script>
+         $(document).on('click', '[id="indexboton"]', function(){     
+             setTimeout(function(){
+               $.mobile.loading('show');
+            },1);    
+         });
+	 </script>
+  </body>
+</html>
