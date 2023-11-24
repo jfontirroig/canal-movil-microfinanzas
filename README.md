@@ -38,70 +38,68 @@ IDIOMA DISPONIBLES
 4. Portugués
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 CARACTERÍSTICAS TÉCNICAS
-
 A continuación se detalla las herramientas y artefactos utilizados para el desarrollo de la aplicación móvil.
 
-CONCEPTO	DETALLE
-COMPILADOR	Adobe PhoneGap 
-TIPO DE APLICACIÓN	Híbrida
-SISTEMAS OPERATIVOS
-COMPATIBLES	iOS Apple
-Android
-Windows Phone
-WebOS
-DEVICES COMPATIBLES	Smarthpones
-Minitablets
-Tablets
-HERRAMIENTAS DE
-PROGRAMACIÓN
-UTILIZADOS	HTML5
-CSS3
-Javascript
-JSON
-XML
-Ajax
-FRAMEWORKS UTILIZADOS	JQuery
-JQueryMobile
-JQueryIU
-Foundation.Zurb
-KnockOutJS (BackboneJS)
-ModernizrJS
-SINCRONIZACIÓN	RestFul
-IFX XML (Interactive Financial eXchange)
-PERSISTENCIA DATO	SQLite
-LocalStorage
-APIS UTILIZADOS	Geolocalización
-Camara
-Map
-Notification
-PLUGINS UTILIZADOS	PushNotification
-SMS
-LIBRARIES UTILIZADOS	Crypto Standford Library Javascript
-Base64 Encoder
-EVENTOS UTILIZADOS	BackButtom
-MenuButtom
-LIBRERIA PARA 
-REPORTES GRAFICOS	ChartJS (Gráficos)
-OTROS	SplashScreen
+COMPILADOR	
+1. Adobe PhoneGap 
+
+TIPO DE APLICACIÓN
+1. Híbrida
+
+SISTEMAS OPERATIVOS COMPATIBLES	
+1. iOS Apple
+2. Android
+
+DEVICES COMPATIBLES	
+1. Smarthpones
+2. Minitablets
+3. Tablets
+   
+HERRAMIENTAS UTILIZADAS	
+1. HTML5
+2. CSS3
+3. Javascript
+4. JSON
+5. XML
+6. Ajax
+  
+FRAMEWORKS UTILIZADOS	
+1. JQuery
+2. JQueryMobile
+3. JQueryIU
+4. Foundation.Zurb
+5. KnockOutJS (BackboneJS)
+6. ModernizrJS
+
+SINCRONIZACIÓN	
+1. RestFul
+3. IFX XML (Interactive Financial eXchange)
+
+PERSISTENCIA DATO	
+1. SQLite
+2. LocalStorage
+
+INTEGRACION	
+1. Geolocalización
+2. Camara
+3. Map
+4. Notification
+
+PLUGINS	
+1. PushNotification
+2. SMS
+
+LIBRERIAS	
+1. Crypto Standford Library Javascript
+2. Base64 Encoder
+3. ChartJS (Gráficos)
+
+EVENTOS UTILIZADOS	
+1. BackButtom
+2. MenuButtom
+
+OTROS	
+1. SplashScreen
 
 
