@@ -1,5 +1,4 @@
-# microfinanzas-smarthphone
-(Microfinanzas en dispositivos móviles)
+# Microfinanzas en dispositivos móviles
 (APLICACIÓN CANAL MÓVIL)
 
 ## CARACTERÍSTICAS OPERACIONALES
