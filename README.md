@@ -6,6 +6,7 @@ CARACTERÍSTICAS
 <MICROFINANZAS>
 
 CARACTERÍSTICAS OPERACIONALES
+
 A continuación se detallan los servicios de la aplicación móvil.
 
 TURNOS:	
