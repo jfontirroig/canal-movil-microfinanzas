@@ -35,7 +35,7 @@ A continuación se detallan los servicios de la aplicación móvil.
 4. Portugués
 
 
-### CARACTERÍSTICAS TÉCNICAS
+## CARACTERÍSTICAS TÉCNICAS
 A continuación se detalla las herramientas y artefactos utilizados para el desarrollo de la aplicación móvil.
 
 ### COMPILADOR	
